@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messagely</title>
+    <link rel="stylesheet" href="https://bootswatch.com/5/morph/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div id="need-auth" >
+        <h1 class="display-1">Messagely</h1>
+        <form id="register-form">
+            <fieldset>
+            <legend>Register</legend>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="register-username" class="form-label mt-4">Username</label>
+                        <input type="text"  class="form-control" id="register-username" placeholder="Choose an username">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password" class="form-label mt-4">Password</label>
+                        <input type="password" class="form-control" id="register-password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-fname" class="form-label mt-4">First Name</label>
+                        <input type="text"  class="form-control" id="register-fname" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-lname" class="form-label mt-4">Last Name</label>
+                        <input type="text"  class="form-control" id="register-lname" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="register-phone" class="form-label mt-4">Phone Number</label>
+                        <input type="text"  class="form-control" id="register-lname" placeholder="Phone Number">
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-primary my-4">Sign-Up</button>
+            </fieldset>
+        </form>
+
+        <form id="login-form">
+            <fieldset>
+            <legend>Login</legend>
+            <div class="form-group row">
+                <div class="col-sm-5">
+                    <div class="form-group">
+                        <label for="login-username" class="form-label mt-4">Username</label>
+                        <input type="text"  class="form-control" id="login-username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password" class="form-label mt-4">Password</label>
+                        <input type="password" class="form-control" id="login-password" placeholder="Enter your password">
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-4">Log-In</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="has-auth" style="display: none">
+        <h1 id="username"></h1>
+
+        <h2>Messages From You</h2>
+        <ul id="msgs-from"></ul>
+
+        <h2>Messages To You</h2>
+        <ul id="msgs-to"></ul>
+
+        <h2>New Message</h2>
+
+        <form id="new-message-form">
+            <div class="form-group">
+                <label for="newmsg-to" class="form-label mt-4">Send message to:</label>
+                <select class="form-select" id="newmsg-to"></select>
+              </div>
+              <div class="form-group">
+                <label for="newmsg-body" class="form-label mt-4">Type your message</label>
+                <textarea class="form-control" id="newmsg-body" rows="3" placeholder="Message here"></textarea>
+              </div>
+              <button class="btn btn-primary mt-4">Send</button>
+        </form>
+    
+        <p><button id="logout" class="btn btn-primary mt-4">Logout</button></p>
+        
+    </div>
+
+</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" 
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
